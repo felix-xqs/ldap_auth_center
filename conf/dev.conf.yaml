@@ -1,0 +1,19 @@
+app:
+  name: "ldap"
+  port: "8001"
+
+log:
+  fileConfig:
+    logFilePath: ./log/
+    maxSize: 64
+    maxBackups: 3
+    maxAge: 1
+    console: true
+    compress: true
+    levelString: debug
+ldapConfig:
+  baseDn: ""
+  roUserName: ""
+  roUserPwd: ""
+  host: ""
+  baseDomain: ""
