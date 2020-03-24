@@ -5,15 +5,6 @@ import (
 	"github.com/satori/go.uuid"
 	"net/http"
 	"strconv"
-	"xgit.xiaoniangao.cn/devops/ldap_server/api"
-	"xgit.xiaoniangao.cn/devops/ldap_server/conf"
-	"xgit.xiaoniangao.cn/devops/ldap_server/service/serviceauth"
-	"xgit.xiaoniangao.cn/devops/ldap_server/service/servicedb"
-	"xgit.xiaoniangao.cn/devops/ldap_server/service/serviceldap"
-	"xgit.xiaoniangao.cn/devops/ldap_server/service/servicewx"
-	"xgit.xiaoniangao.cn/devops/ldap_server/util/net"
-	"xgit.xiaoniangao.cn/devops/ldap_server_api/ldapapi"
-	"xgit.xiaoniangao.cn/xngo/lib/sdk/lib"
 )
 
 //Login login create token

@@ -1,15 +1,10 @@
 package workwx
 
 import (
+	"github.com/felix-xqs/ldap_auth_center/util/net"
 	"github.com/gin-gonic/gin"
 	uuid "github.com/satori/go.uuid"
 	"net/http"
-	"xgit.xiaoniangao.cn/devops/ldap_server/conf"
-	"xgit.xiaoniangao.cn/devops/ldap_server/service/servicewx"
-	"xgit.xiaoniangao.cn/devops/ldap_server/util/net"
-	"xgit.xiaoniangao.cn/devops/ldap_server_api/ldapapi"
-	"xgit.xiaoniangao.cn/xngo/lib/sdk/lib"
-	"xgit.xiaoniangao.cn/xngo/lib/sdk/xng"
 )
 
 //WxEcho work weixin echo data

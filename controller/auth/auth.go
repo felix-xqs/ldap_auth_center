@@ -1,13 +1,11 @@
 package auth
 
 import (
+	"github.com/felix-xqs/ldap_auth_center/api"
+	"github.com/felix-xqs/ldap_auth_center/conf"
+	"github.com/felix-xqs/ldap_auth_center/util/net"
 	"github.com/gin-gonic/gin"
 	uuid "github.com/satori/go.uuid"
-	"xgit.xiaoniangao.cn/devops/ldap_server/api"
-	"xgit.xiaoniangao.cn/devops/ldap_server/conf"
-	"xgit.xiaoniangao.cn/devops/ldap_server/service/serviceauth"
-	"xgit.xiaoniangao.cn/devops/ldap_server/util/net"
-	"xgit.xiaoniangao.cn/xngo/lib/sdk/lib"
 )
 
 // UserAuth ...
@@ -19,7 +17,7 @@ func UserAuth(ctx *gin.Context) {
 	}
 	var err error
 	if err = ctx.ShouldBindJSON(req); err != nil {
-		conf.Logger.ErrorW("bind json for UserAuthReq fail",
+		conf.C.Log.ErrorW("bind json for UserAuthReq fail",
 			map[string]interface{}{"err": err, "traceID": traceID})
 		net.Reply200(ctx, net.FailWithDetail(lib.CodePara, err.Error()))
 		return
